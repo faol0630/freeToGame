@@ -27,6 +27,7 @@ a internet(Room)
 * Navigation Component
 * Fragments
 * ViewBinding 
+* Glide
 
 ## Pantallas
 
