@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/gamesEntry">
+    <fragment
+        android:id="@+id/gamesEntry"
+        android:name="com.example.free_to_game.api.ui.GamesEntry"
+        android:label="entry"
+        tools:layout="@layout/entry" >
+        <action
+            android:id="@+id/action_gamesEntry_to_gamesList"
+            app:destination="@id/gamesList" />
+        <action
+            android:id="@+id/action_gamesEntry_to_favoritesList"
+            app:destination="@id/favoritesList" />
+    </fragment>
+    <fragment
+        android:id="@+id/gamesList"
+        android:name="com.example.free_to_game.api.ui.GamesList"
+        android:label="games_list"
+        tools:layout="@layout/games_list" >
+        <action
+            android:id="@+id/action_gamesList_to_gamesDetails"
+            app:destination="@id/gamesDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesList"
+        android:name="com.example.free_to_game.api.ui.FavoritesList"
+        android:label="favorites_list"
+        tools:layout="@layout/favorites_list" >
+        <action
+            android:id="@+id/action_favoritesList_to_favoritesDetails"
+            app:destination="@id/favoritesDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/gamesDetails"
+        android:name="com.example.free_to_game.api.ui.GamesDetails"
+        android:label="games_details"
+        tools:layout="@layout/games_details" />
+    <fragment
+        android:id="@+id/favoritesDetails"
+        android:name="com.example.free_to_game.api.ui.FavoritesDetails"
+        android:label="favorites_details"
+        tools:layout="@layout/favorites_details" />
+</navigation>

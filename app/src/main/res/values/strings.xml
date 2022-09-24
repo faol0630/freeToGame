@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Free_to_game</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all_games">All Games</string>
+    <string name="only_browser_games">Only Browser Games</string>
+    <string name="only_pc_games">Only PC Games</string>
+    <string name="freetogame">FREETOGAME</string>
+    <string name="shooter">Shooter</string>
+    <string name="racing">Racing</string>
+    <string name="superhero">Superhero</string>
+    <string name="release_date">Release Date</string>
+    <string name="alphabetically">Alphabetically</string>
+    <string name="error_image">error image</string>
+    <string name="floatingbutton">floatingbutton</string>
+    <string name="title">Title</string>
+    <string name="id">Id</string>
+    <string name="url">Url</string>
+    <string name="platform">Platform</string>
+    <string name="developer">Developer</string>
+    <string name="publisher">Publisher</string>
+    <string name="game_image">game image</string>
+    <string name="short_description">Short Description</string>
+    <string name="favorites">Favorites</string>
+    <string name="anime">Anime</string>
+    <string name="sci_fi">Sci-fi</string>
+    <string name="browser_games">Browser Games</string>
+</resources>
