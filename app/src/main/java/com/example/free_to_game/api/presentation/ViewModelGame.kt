@@ -60,8 +60,14 @@ class ViewModelGame @Inject constructor(
     fun getShooterGamesVM() {
         viewModelScope.launch {
             _updatingSealedGame.postValue(SealedClassGame.Loading)
-            val shooterGames = repositoryInt.getShooterGames()
-            _updatingSealedGame.postValue(SealedClassGame.Content(shooterGames))
+
+            try {
+                val shooterGames = repositoryInt.getShooterGames()
+                _updatingSealedGame.postValue(SealedClassGame.Content(shooterGames))
+            }catch (e: Exception){
+                _updatingSealedGame.postValue(SealedClassGame.Error)
+            }
+
 
         }
     }
@@ -69,8 +75,13 @@ class ViewModelGame @Inject constructor(
     fun getRacingGamesVM() {
         viewModelScope.launch {
             _updatingSealedGame.postValue(SealedClassGame.Loading)
-            val racingGames = repositoryInt.getRacingGames()
-            _updatingSealedGame.postValue(SealedClassGame.Content(racingGames))
+
+            try {
+                val racingGames = repositoryInt.getRacingGames()
+                _updatingSealedGame.postValue(SealedClassGame.Content(racingGames))
+            }catch (e: Exception){
+                _updatingSealedGame.postValue(SealedClassGame.Error)
+            }
 
         }
     }
@@ -78,8 +89,13 @@ class ViewModelGame @Inject constructor(
     fun getSuperheroGamesVM() {
         viewModelScope.launch {
             _updatingSealedGame.postValue(SealedClassGame.Loading)
-            val superheroGames = repositoryInt.getSuperheroGames()
-            _updatingSealedGame.postValue(SealedClassGame.Content(superheroGames))
+
+            try {
+                val superheroGames = repositoryInt.getSuperheroGames()
+                _updatingSealedGame.postValue(SealedClassGame.Content(superheroGames))
+            }catch (e: Exception){
+                _updatingSealedGame.postValue(SealedClassGame.Error)
+            }
 
         }
     }
@@ -87,17 +103,26 @@ class ViewModelGame @Inject constructor(
     fun getGamesByReleaseDateVM() {
         viewModelScope.launch {
             _updatingSealedGame.postValue(SealedClassGame.Loading)
-            val gamesByReleaseDate = repositoryInt.getGamesByReleaseDate()
-            _updatingSealedGame.postValue(SealedClassGame.Content(gamesByReleaseDate))
 
+            try {
+                val gamesByReleaseDate = repositoryInt.getGamesByReleaseDate()
+                _updatingSealedGame.postValue(SealedClassGame.Content(gamesByReleaseDate))
+            }catch (e: Exception){
+                _updatingSealedGame.postValue(SealedClassGame.Error)
+            }
         }
     }
 
     fun getGamesAlphabeticallyVM() {
         viewModelScope.launch {
             _updatingSealedGame.postValue(SealedClassGame.Loading)
-            val gamesAlphabetically = repositoryInt.getGamesAlphabetically()
-            _updatingSealedGame.postValue(SealedClassGame.Content(gamesAlphabetically))
+
+            try {
+                val gamesAlphabetically = repositoryInt.getGamesAlphabetically()
+                _updatingSealedGame.postValue(SealedClassGame.Content(gamesAlphabetically))
+            }catch (e: Exception){
+                _updatingSealedGame.postValue(SealedClassGame.Error)
+            }
 
         }
     }
@@ -105,8 +130,13 @@ class ViewModelGame @Inject constructor(
     fun getFlightGamesVM() {
         viewModelScope.launch {
             _updatingSealedGame.postValue(SealedClassGame.Loading)
-            val flightGames = repositoryInt.getFlightGames()
-            _updatingSealedGame.postValue(SealedClassGame.Content(flightGames))
+
+            try {
+                val flightGames = repositoryInt.getFlightGames()
+                _updatingSealedGame.postValue(SealedClassGame.Content(flightGames))
+            }catch (e: Exception){
+                _updatingSealedGame.postValue(SealedClassGame.Error)
+            }
 
         }
     }
@@ -114,8 +144,13 @@ class ViewModelGame @Inject constructor(
     fun getAnimeGamesVM() {
         viewModelScope.launch {
             _updatingSealedGame.postValue(SealedClassGame.Loading)
-            val animeGames = repositoryInt.getAnimeGames()
-            _updatingSealedGame.postValue(SealedClassGame.Content(animeGames))
+
+            try {
+                val animeGames = repositoryInt.getAnimeGames()
+                _updatingSealedGame.postValue(SealedClassGame.Content(animeGames))
+            }catch (e: Exception){
+                _updatingSealedGame.postValue(SealedClassGame.Error)
+            }
 
         }
     }
@@ -123,8 +158,13 @@ class ViewModelGame @Inject constructor(
     fun getScifiGamesVM() {
         viewModelScope.launch {
             _updatingSealedGame.postValue(SealedClassGame.Loading)
-            val scifiGames = repositoryInt.getScifiGames()
-            _updatingSealedGame.postValue(SealedClassGame.Content(scifiGames))
+
+            try {
+                val scifiGames = repositoryInt.getScifiGames()
+                _updatingSealedGame.postValue(SealedClassGame.Content(scifiGames))
+            }catch (e: Exception){
+                _updatingSealedGame.postValue(SealedClassGame.Error)
+            }
 
         }
     }
